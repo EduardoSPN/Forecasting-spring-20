@@ -22,6 +22,61 @@ class: center, middle, inverse, title-slide
 
 
 
+
+class: inverse, center, middle
+
+# R Studio
+
+---
+
+### First things first - What is R?
+
+**R Language** 
+R is a free, open-source software and programming language developed in 1995 at the University of Auckland as an environment for statistical computing and graphics. R is as an open source implementation of the “S” programming language. With a huge online support community and dedicated packages that provide extra functionality for virtually any application and field of study, there’s hardly anything you can’t do in R.
+
+.middle.center[
+
+&lt;img src="Rlogo.png" height="280px"&gt;
+
+]
+
+*Sources: https://ourcodingclub.github.io/2016/11/13/intro-to-r.html*
+
+---
+
+### R Studio
+
+
+RStudio is an integrated development environment (IDE) that allows you to interact with R more readily.
+
+
+**This is what R Studio environment looks like**
+
+.middle.center[
+
+&lt;img src="R_Studio_1.png" height="310px"&gt;
+
+]
+
+*Source: https://ourcodingclub.github.io/2016/11/13/intro-to-r.html*
+
+---
+
+### R Studio
+
+**Here are the 'formal' names of each part of the environment:**
+
+.middle.center[
+
+&lt;img src="R_Studio_2.png" height="310px"&gt;
+
+]
+
+
+*Source: http://ncss-tech.github.io/stats_for_soil_survey/chapters/1_introduction/1_introduction.html*
+
+---
+
 class: inverse, center, middle
 
 # R Markdown - Quick Overview
@@ -180,7 +235,7 @@ runif(1)
 ```
 
 ```
-#&gt; [1] 0.05060062
+#&gt; [1] 0.6008382
 ```
 
 ```r
@@ -188,7 +243,7 @@ runif(4)
 ```
 
 ```
-#&gt; [1] 0.09242818 0.08334230 0.17990738 0.38459936
+#&gt; [1] 0.7116116 0.6989487 0.7683671 0.3176031
 ```
 
 ```r
@@ -196,7 +251,7 @@ runif(3, min=0, max=100)
 ```
 
 ```
-#&gt; [1] 87.794493 41.615177  8.899828
+#&gt; [1] 42.21615 36.16703 62.35597
 ```
 
 ---
@@ -211,7 +266,7 @@ sample(1:100, 3, replace=TRUE)
 ```
 
 ```
-#&gt; [1]  8 14 83
+#&gt; [1] 82 98 38
 ```
 
 ```r
@@ -219,7 +274,7 @@ sample(1:100, 3, replace=FALSE)
 ```
 
 ```
-#&gt; [1]  6 88 84
+#&gt; [1] 39 42 87
 ```
 
 ```r
@@ -229,7 +284,7 @@ rnorm(4)
 ```
 
 ```
-#&gt; [1]  0.15755934 -0.09569306  2.14699808 -1.45541627
+#&gt; [1]  1.349866  1.299307 -0.585572  1.099626
 ```
 
 ```r
@@ -237,7 +292,7 @@ rnorm(4, mean=50, sd=10)
 ```
 
 ```
-#&gt; [1] 51.18603 40.71580 46.69530 54.98720
+#&gt; [1] 53.93765 59.35870 65.61497 48.67752
 ```
 
 ---
@@ -250,7 +305,7 @@ x &lt;- rnorm(400, mean=50, sd=10)
 hist(x)
 ```
 
-![](Lec1_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+&lt;img src="Lec1_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1641,7 +1696,7 @@ plot(LakeHuron, type="l", main='type=l')
 plot(LakeHuron, type="p", main='type=p')
 ```
 
-![](Lec1_files/figure-html/unnamed-chunk-51-1.png)![](Lec1_files/figure-html/unnamed-chunk-51-2.png)
+![](Lec1_files/figure-html/unnamed-chunk-50-1.png)![](Lec1_files/figure-html/unnamed-chunk-50-2.png)
 
 ---
 
@@ -1654,7 +1709,7 @@ plot(LakeHuron, type="p", main='type=p')
 plot(LakeHuron, type="b", main='type=b')
 ```
 
-&lt;img src="Lec1_files/figure-html/unnamed-chunk-52-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lec1_files/figure-html/unnamed-chunk-51-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1667,7 +1722,7 @@ plot(LakeHuron, type="b", main='type=b')
 scatt &lt;- plot(mtcars$mpg, mtcars$disp)
 ```
 
-&lt;img src="Lec1_files/figure-html/unnamed-chunk-53-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lec1_files/figure-html/unnamed-chunk-52-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1678,7 +1733,7 @@ scatt &lt;- plot(mtcars$mpg, mtcars$disp)
 scatt_mat &lt;-  pairs(iris)
 ```
 
-&lt;img src="Lec1_files/figure-html/unnamed-chunk-54-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lec1_files/figure-html/unnamed-chunk-53-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1689,7 +1744,7 @@ scatt_mat &lt;-  pairs(iris)
 hist_mpg &lt;- hist(mtcars$mpg)
 ```
 
-&lt;img src="Lec1_files/figure-html/unnamed-chunk-55-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lec1_files/figure-html/unnamed-chunk-54-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1703,7 +1758,7 @@ box &lt;- boxplot(mtcars$disp, mtcars$mpg, names = c('disp', 'mpg'))
 title('Boxplot')
 ```
 
-&lt;img src="Lec1_files/figure-html/unnamed-chunk-56-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lec1_files/figure-html/unnamed-chunk-55-1.png" style="display: block; margin: auto;" /&gt;
 
 *When you are preparing a report in R Markdown, you can use the `echo = FALSE` parameter to prevent printing of the R code that generated the plot.*
 
@@ -1722,7 +1777,7 @@ qplot(mpg, data=mtcars, geom="density", fill=I('red'), alpha=I(.5),
    ylab="Density")
 ```
 
-&lt;img src="Lec1_files/figure-html/unnamed-chunk-57-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lec1_files/figure-html/unnamed-chunk-56-1.png" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -1741,7 +1796,7 @@ qplot(mpg, data=mtcars, geom="density", fill=gear_fact, alpha=I(.5),
    ylab="Density")
 ```
 
-&lt;img src="Lec1_files/figure-html/unnamed-chunk-58-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lec1_files/figure-html/unnamed-chunk-57-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1756,7 +1811,7 @@ qplot(gear_fact, mpg, data=mtcars, geom=c("boxplot", "jitter"),
    xlab="", ylab="Miles per Gallon")
 ```
 
-&lt;img src="Lec1_files/figure-html/unnamed-chunk-59-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lec1_files/figure-html/unnamed-chunk-58-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1789,7 +1844,7 @@ data %&gt;%
     ylab("bitcoin price ($)") 
 ```
 
-&lt;img src="Lec1_files/figure-html/Bitcoin-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lec1_files/figure-html/unnamed-chunk-59-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1884,7 +1939,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp, size = pop, colour = country))
   theme_bw(base_size = 16)
 ```
 
-&lt;img src="Lec1_files/figure-html/unnamed-chunk-63-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lec1_files/figure-html/unnamed-chunk-64-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -1905,26 +1960,34 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp, size = pop, colour = country))
   ease_aes('linear')
 ```
 
-&lt;img src="Lec1_files/figure-html/unnamed-chunk-64-1.gif" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lec1_files/figure-html/unnamed-chunk-65-1.gif" style="display: block; margin: auto;" /&gt;
 
---- 
+---
 
-##Check out the cheatsheets of the different packages and tools here:
+#### Check out the cheatsheets of the different packages and tools here:
 
 https://rstudio.com/resources/cheatsheets/ 
 
 --- 
+  
 
-## References
+#### References
 
-*https://r4ds.had.co.nz/ 
-*http://www.cookbook-r.com/ 
-*https://www.econometrics-with-r.org/1-1-a-very-short-introduction-to-r-and-rstudio.html 
-*https://rmarkdown.rstudio.com/index.html 
-*https://www.ssc.wisc.edu/sscc/pubs/RFR/RFR_RMarkdown.html
-*https://shawnsanto.com/teaching/duke/sta523/week1/ 
-*https://www.datamentor.io/r-programming/operator/ 
-*https://www.data-to-viz.com/
+* https://r4ds.had.co.nz/ 
+
+* http://www.cookbook-r.com/ 
+
+* https://www.econometrics-with-r.org/1-1-a-very-short-introduction-to-r-and-rstudio.html 
+
+* https://rmarkdown.rstudio.com/index.html 
+
+* https://www.ssc.wisc.edu/sscc/pubs/RFR/RFR_RMarkdown.html
+
+* https://shawnsanto.com/teaching/duke/sta523/week1/ 
+
+* https://www.datamentor.io/r-programming/operator/ 
+
+* https://www.data-to-viz.com/
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
